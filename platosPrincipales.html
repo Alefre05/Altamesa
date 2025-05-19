@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAMESA</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./JavaSript/Desplegable.js" defer></script>
+    <script src="./JavaSript/JSJ.js" defer></script>
+    <script src="./JavaSript/imagenPlatoPrincipal.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>ALTAMESA</h1>
+       <img src="./imagen/ALTAMESA(1) (1).png" alt="Logo Resto Grill" class="logo">
+        <!-- Botón de menú desplegable con ícono de FontAwesome -->
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+        </button>
+    </header>
+    <nav id="nav">
+            <div id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="inicioSesion.html">Inicio Sesión</a>
+                <a href="comidas.html">Nuestras Recetas</a>
+                <a href="alergenos.html">Alérgenos</a>
+                <a href="suscripcion.html">Suscripción</a>
+            </div>
+        </nav>
+        <div id="nav-comidas">
+            <a href="entrantes.html">Entrantes</a>
+            <a href="platosPrincipales.html">Platos Principales</a>
+            <a href="postres.html">Postres</a>
+        </div>
+    <div class="container">
+        <h1>Platos principales</h1>
+        
+        <div class="menu-grid">
+            <!-- Dish 1 -->
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 1.jpg" alt="Risotto de pato y setas">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Albondigas de cordero con salsa de yogur y menta</h3>
+                    <p class="item-weight">(420g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🌾</div>
+                        <div class="icon">🥩</div>
+                    </div>
+                    <div class="price">8,95€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">360</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">19g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">43g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">52g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <!-- Dish 2 -->
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 2.jpg" alt="Risotto de pato y setas">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Pollo con mantequilla de cacahuete y lima</h3>
+                    <p class="item-weight">(420g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥩</div>
+                        <div class="icon">🍏</div>
+                    </div>
+                    <div class="price">7,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">638</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">34g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">59g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">23g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <!-- Dish 3 -->
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 3.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">tacos de cochinita pibil con cebolla morada encurtida</h3>
+                    <p class="item-weight">(450g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥩</div>
+                        <div class="icon">🥬</div>
+                    </div>
+                    <div class="price">7,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">549</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">22g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">37g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">50g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <!-- Dish 4 -->
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 4.jpg" alt="Risotto de pato y setas">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Pollo al curry con plátano macho</h3>
+                    <p class="item-weight">(150g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🥩</div>
+                    </div>
+                    <div class="price">9,95€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">571</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">19g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">58g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">42g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <!-- Additional dishes (optional) -->
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 5.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Pastel de carne con puré de boniato</h3>
+                    <p class="item-weight">(380g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥩</div>
+                        <div class="icon">🥬</div>
+                    </div>
+                    <div class="price">6,50€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">320</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">25g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">15g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 6.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Brochetas de pollo con salsa de sésamo y miel</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🐚</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">9,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 7.jpg" alt="Risotto de pato y setas">
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Rollitos vietnamitas de carne de cerdo y mango</h3>
+                    <p class="item-weight">(430g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥩</div>
+                        <div class="icon">🥥</div>
+                        <div class="icon">🍚</div>
+                    </div>
+                    <div class="price">8,50€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">510</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">15g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">68g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">22g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/pescado 1.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Gyozas de gambas con jengibre y cebollino</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🐚</div>
+                        <div class="icon">🐟</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">9,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/pescado 2.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Pimientos del piquillo rellenos de merluza </h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🐟</div>
+
+                    </div>
+                    <div class="price">9,85€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/pescado 3.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Arroz con pulpo al estilo gallego</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🐟</div>
+                    </div>
+                    <div class="price">13,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/verdura 1.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">CURRY DE GARBANZOS Y BONIATO CON LECHE DE COCO</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">6,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/verdura  2.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Berenjenas asadas con miso y sésamo</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">7,80€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/verdura  3.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Arroz salvaje con setas, espárragos y soja texturizada</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">12,99€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/verdura  4.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Falafel al horno con crema de tahini y pepino</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">5,85€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/verdura  5.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Pasta de calabacin con pesto rojo de anacardos</h3>
+                    <p class="item-weight">(410g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥬</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">7,25€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">425</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">12g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">65g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">18g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="imagen/plato principal 8.jpg" alt="Risotto de pato y setas">
+                    <div class="equilibrado">equilibrado</div>
+                </div>
+                <div class="item-info">
+                    <h3 class="item-title">Pollo tikka masala con arroz basmati</h3>
+                    <p class="item-weight">(440g)</p>
+                    <div class="dietary-icons">
+                        <div class="icon">🥩</div>
+                        <div class="icon">🌾</div>
+                    </div>
+                    <div class="price">11,95€</div>
+                    <div class="nutrition-info">
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">495</span>
+                            <span class="nutrition-label">Kilocalorías</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">25g</span>
+                            <span class="nutrition-label">Grasas</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">32g</span>
+                            <span class="nutrition-label">Carbohidratos</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-value">38g</span>
+                            <span class="nutrition-label">Proteínas</span>
+                        </div>
+                    </div>
+                    <button class="add-button">AÑADIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-main">
+            <div class="footer-logo">
+                <h3>ALTAMESA</h3>
+                <p>Experiencia gastronómica única</p>
+            </div>
+            
+           <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="avisosLegales.html">Avisos Legales</a></li>
+                    <li><a href="politicaCookies.html">Politica de Cookies</a></li>
+                    <li><a href="politicaPriacidad.html">Politica de Privacidad</a></li>
+                    <li><a href="CondicionesCompra.html">Condiciones de Compra</a></li>
+                    <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="https://www.aesan.gob.es/AECOSAN/web/seguridad_alimentaria/subseccion/legislacion_seguridad_alimentaria.htm" target="_blank">Legislación Alimentaria</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contáctanos</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@altamesa.com</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 ALTAMESA. Todos los derechos reservados.</p>
+            <p>Diseñado con <i class="fas fa-heart"></i> por ALTAMESA</p>
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>
