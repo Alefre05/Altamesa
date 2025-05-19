@@ -1,0 +1,803 @@
+/* Estilos para el menú desplegable mejorado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {      
+    margin: 0;
+    background-color: #fff7da;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 220px; /* Espacio para header y nav fijos */
+    font-family: 'Barlow static';
+}
+
+header {
+    background-color: #097D4C;
+    color: #FF914D;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Barlow static';
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logo {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 3px solid #097D4C; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+    font-family: 'Barlow static';
+    position: fixed;
+    top: 170px; /* Altura del header */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 12px;
+    font-family: 'Barlow static';
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 30px;
+    background-color: #fff7da;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+    font-family: 'Barlow static', sans-serif;
+}
+
+.hero p {
+    font-size: 12px;
+    line-height: 1.6;
+    border-radius: 10px;
+    background-color: #fff7da;
+    padding: 20px;
+    color: #333;
+    font-family: 'Barlow static', sans-serif;
+}
+
+footer {
+    background-color: #FF914D;
+    color: #097D4C;
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 0;
+    width: 100%;
+}
+/* Botón de menú */
+#menu-toggle {
+    display: none; /* Oculto por defecto en escritorio */
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+#menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para el slider de productos */
+.featured-products {
+    background-color: #fff7da;
+    padding: 50px 0;
+    position: relative;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.product-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+
+.product-card {
+    position: absolute;
+    width: 320px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: scale(1);
+    overflow: hidden;
+}
+
+.product-card:not(.active) .product-image {
+    filter: blur(3px) brightness(0.8);
+    transform: scale(1.1);
+}
+
+.product-card.active {
+    transform: scale(1);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-card.active .product-image {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.product-image {
+    height: 70%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-info p {
+    color: #666;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider-controls button {
+    background-color: rgba(9, 125, 76, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #097D4C;
+    transform: scale(1.1);
+}
+/* Footer Styles */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-logo, .footer-links, .footer-contact, .footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #097D4C;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #097D4C;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(9, 125, 76, 0.3);
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Barlow static', sans-serif;
+}
+
+.popup-contenido {
+  background: #fff7da; /* Color de fondo que coincide con tu web */
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid #097D4C; /* Borde verde como tu logo */
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.popup-contenido.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-contenido img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #097D4C;
+  object-fit: cover;
+}
+
+.popup-contenido h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #097D4C; /* Verde ALTAMESA */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-contenido p {
+  font-size: 16px;
+  color: #444;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+.popup-contenido input[type="email"] {
+  width: 90%;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.popup-contenido input[type="email"]:focus {
+  border-color: #097D4C;
+}
+
+.popup-contenido .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.popup-contenido input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  accent-color: #097D4C; /* Color del checkbox al marcarlo */
+}
+
+.popup-contenido label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  font-size: 15px;
+  color: #444;
+  cursor: pointer;
+}
+
+.popup-contenido .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.popup-contenido button {
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.aceptar-btn {
+  background-color: #097D4C; /* Verde ALTAMESA */
+  color: white;
+}
+
+button.aceptar-btn:hover {
+  background-color: #076b41;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(9, 125, 76, 0.3);
+}
+
+button.cerrar-btn {
+  background-color: #FF914D; /* Naranja ALTAMESA */
+  color: white;
+}
+
+button.cerrar-btn:hover {
+  background-color: #e8803c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 145, 77, 0.3);
+}
+
+#mensaje {
+  font-weight: bold;
+  margin: 15px 0;
+  min-height: 24px;
+  transition: opacity 0.3s;
+  font-size: 15px;
+}
+
+#mensaje.ok {
+  color: #097D4C;
+  background-color: rgba(9, 125, 76, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#mensaje.error {
+  color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Estilos para la imagen tabla */
+#imagen-tabla {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+    position: relative;
+}
+
+#imagen-tabla::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #FF914D;
+    border-radius: 8px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+/* Estilos para el botón A COMER */
+.comer-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px auto;
+    width: 100%;
+}
+
+.comer-btn {
+    display: inline-block;
+    background-color: #FF914D;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 145, 77, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #FF914D;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.comer-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #097D4C;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.comer-btn:hover {
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(9, 125, 76, 0.5);
+    border-color: #097D4C;
+}
+
+.comer-btn:hover:before {
+    left: 0;
+}
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    body {
+        padding-top: 170px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /* Añadido espacio a la derecha para evitar superposición */
+    header h1 {
+        margin-left: 100px;
+    }
+    .logo {
+        width: 80px; /* Reducir un poco el tamaño */
+        height: 80px;
+        margin-left: 0; /* Pegado al borde izquierdo */
+        align-self: flex-start; /* Alinear a la izquierda en vez de centrar */
+        position: absolute; /* Posicionamiento absoluto */
+        left: 15px; /* Distancia desde el borde izquierdo */
+        top: 15px; /* Distancia desde el borde superior */
+    }
+
+    nav {
+        top: 120px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        top: 30px; /* Ajustado para alineación vertical */
+        right: 15px;
+        z-index: 1001;
+        font-size: 2.2rem; /* Hacer el botón más grande */
+        color: #FF914D; /* Color naranja para mejor visibilidad */
+        background-color: transparent;
+    }
+    
+    #nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:#333; /* Verde ALTAMESA con transparencia */
+        padding: 2rem 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    #nav-links.show {
+        transform: translateX(0);
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    
+    #nav-links a {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        width: 80%;
+        text-align: center;
+        margin: 0.5rem 0;
+        color: white;
+        border-radius: 8px;
+        background-color: #444; /* Naranja ALTAMESA */
+        transition: all 0.3s ease;
+        border: none;
+    }
+    
+    #nav-links a:hover {
+        background-color: #FF914D;
+        text-decoration: none;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    /* Animación de entrada para cada enlace cuando el menú está visible */
+    #nav-links.show a {
+        animation: fadeInRight 0.5s ease forwards;
+        opacity: 0;
+    }
+    
+    #nav-links.show a:nth-child(1) { animation-delay: 0.1s; }
+    #nav-links.show a:nth-child(2) { animation-delay: 0.2s; }
+    #nav-links.show a:nth-child(3) { animation-delay: 0.3s; }
+    #nav-links.show a:nth-child(4) { animation-delay: 0.4s; }
+    #nav-links.show a:nth-child(5) { animation-delay: 0.5s; }
+
+    .product-slider {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .product-card {
+        position: absolute;
+        width: 280px;
+        height: 400px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .slider-controls {
+        position: absolute;
+        bottom: 10px;
+        top: auto;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 0;
+        z-index: 10;
+    }
+    
+    .slider-controls button {
+        background-color: rgba(9, 125, 76, 0.9);
+        width: 40px;
+        height: 40px;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-links, .footer-contact, .footer-social {
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom p {
+        margin-bottom: 10px;
+    }
+
+    .popup-contenido {
+    padding: 25px;
+    max-width: 85%;
+  }
+  
+  .popup-contenido h2 {
+    font-size: 20px;
+  }
+  
+  .popup-contenido button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  /* Estilos para la imagen tabla */
+#imagen-tabla {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+    position: relative;
+}
+
+#imagen-tabla::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #FF914D;
+    border-radius: 8px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+/* Estilos para el botón A COMER */
+.comer-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px auto;
+    width: 100%;
+}
+
+.comer-btn {
+    display: inline-block;
+    background-color: #FF914D;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 145, 77, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #FF914D;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.comer-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #097D4C;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.comer-btn:hover {
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(9, 125, 76, 0.5);
+    border-color: #097D4C;
+}
+
+.comer-btn:hover:before {
+    left: 0;
+}
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
